@@ -1,0 +1,41 @@
+.about-me-section {
+    background-color: #141D2F;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 470px;
+    margin-left: 100px;
+
+    h2 {
+        font-size: 90px;
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+
+    img {
+        margin-right: 20px;
+    }
+}
+
+.vector {
+    width: 100%;
+}
+
+.shadow {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+}
+
+.d-flex {
+    display: flex;
+}
