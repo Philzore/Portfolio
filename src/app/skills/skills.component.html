@@ -1,5 +1,38 @@
+<img class="vector" src="/assets/shadows/vector.png">
 <div class="skill-container">
-    
+    <div class="icon-container">
+        <div class="icon-row">
+            <div *ngFor="let currentRow of firstRow" class="single-icon">
+                <img src="assets/icons/{{ currentRow.img }}">
+                <span>{{ currentRow.text }}</span>
+            </div>
+        </div>
+        <div class="icon-row">
+            <div *ngFor="let currentRow of secondRow" class="single-icon">
+                <img src="assets/icons/{{ currentRow.img }}">
+                <span>{{ currentRow.text }}</span>
+            </div>
+        </div>
+        <div class="icon-row">
+            <div *ngFor="let currentRow of thirdRow" class="single-icon">
+                <img src="assets/icons/{{ currentRow.img }}">
+                <span>{{ currentRow.text }}</span>
+            </div>
+        </div>
+        <div class="icon-row">
+            <div *ngFor="let currentRow of fourthRow" class="single-icon">
+                <img src="assets/icons/{{ currentRow.img }}">
+                <span>{{ currentRow.text }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="skill-text-container">
+        <div class="skill-header">
+            <h2>Skills</h2>
+            <hr>
+        </div>
+        <p>I have gained experience in building projects with various<br>
+            front end technologies and concepts</p>
+        <button class="btn-get-in-touch">Get in touch</button>
+    </div>
 </div>
-
-

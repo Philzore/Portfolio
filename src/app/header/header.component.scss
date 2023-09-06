@@ -11,14 +11,36 @@ header {
     padding-left: 120px;
     padding-right: 120px;
 
+    img {
+        height: 70px;
+    }
+
     a {
         color: white;
         text-decoration: none;
         margin-left: 32px;
         font-weight: 500;
+        font-size: 24px;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: #4B47FF;
+            transition: width .3s;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
 
         &:hover {
-            color: rgba(255,255,255, 0.8);
+            color: #00BEE8;
+            border-bottom: solid 3px;
+            border-bottom: #4B47FF;
+            transition: all 125ms ease-in-out;
         }
     }
 }

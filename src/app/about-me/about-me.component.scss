@@ -1,9 +1,33 @@
+.social-buttons {
+    background-color: #141D2F;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    hr {
+        margin: 0;
+        width: 100px;
+        height: 4px;
+        background-color: #00BEE8;
+        border: none;
+        border-radius: 4px;
+    }
+
+    img {
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            scale: 1.2;
+        }
+    }
+}
+
 .about-me-section {
     background-color: #141D2F;
     width: 100vw;
     overflow: hidden;
-    position: relative;
-    
+    display: flex;
 }
 
 .about-me-text {
@@ -28,12 +52,6 @@
 
 .vector {
     width: 100%;
-}
-
-.shadow {
-    position: absolute;
-    right: 20px;
-    bottom: 50px;
 }
 
 .d-flex {

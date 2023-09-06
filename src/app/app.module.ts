@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { WelcomeSectionComponent } from './welcome-section/welcome-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
+import { SingleProjectComponent } from './single-project/single-project.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { SkillsComponent } from './skills/skills.component';
     HeaderComponent,
     WelcomeSectionComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    PortfolioComponent,
+    ContactComponent,
+    FooterComponent,
+    SingleProjectComponent
   ],
   imports: [
     BrowserModule,
