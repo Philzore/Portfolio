@@ -1,4 +1,7 @@
 .portfolio-container {
+    display: flex;
+    flex-direction: column;
+
     background-color: #141D2F;
     margin-top: -120px;
     padding-top: 200px;
@@ -35,4 +38,9 @@
         font-size: 16px;
         padding-left: 50px;
     }
+}
+
+.project-container{
+    display: flex;
+    flex-wrap: wrap;
 }
