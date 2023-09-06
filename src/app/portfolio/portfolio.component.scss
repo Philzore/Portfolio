@@ -1,0 +1,38 @@
+.portfolio-container {
+    background-color: #141D2F;
+    margin-top: -120px;
+    padding-top: 200px;
+}
+
+
+.portfolio-text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .portfolio-header {
+        display: flex;
+        align-items: center;
+
+        hr {
+            width: 50px;
+            height: 4px;
+            background-color: #4B47FF;
+            border: none;
+            border-radius: 4px;
+            margin: 0;
+        }
+    }
+
+    h2 {
+        color: white;
+        font-size: 90px;
+        margin: 0;
+    }
+
+    p {
+        color: white;
+        font-size: 16px;
+        padding-left: 50px;
+    }
+}

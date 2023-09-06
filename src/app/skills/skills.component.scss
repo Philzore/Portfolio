@@ -1,14 +1,17 @@
 .skill-container {
     display: flex;
     justify-content: space-between;
-    margin-top: -600px;
+    margin-top: -670px;
+    // background-image: url('../../assets/shadows/vector.png');
+    // background-repeat: no-repeat;
+    // background-size: 100%;
 }
 
 .icon-container {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-left: 20px;
+    margin-left: 50px;
 
     .icon-row {
         display: flex;
