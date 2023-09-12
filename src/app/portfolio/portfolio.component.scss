@@ -42,5 +42,51 @@
 
 .project-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .line-1,.line-2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .projects {
+        
+    }
+
+    .filter-links {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 20px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            display: inline-block;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 3px;
+                background: #4B47FF;
+                transition: width .3s;
+            }
+    
+            &:hover::after {
+                width: 100%;
+            }
+    
+            &:hover {
+                color: #00BEE8;
+                border-bottom: solid 3px;
+                border-bottom: #4B47FF;
+                transition: all 125ms ease-in-out;
+            }
+        }
+    }
 }

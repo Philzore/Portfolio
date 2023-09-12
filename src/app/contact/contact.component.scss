@@ -1,0 +1,65 @@
+.contact-container {
+    background-color: #141D2F;
+}
+
+.contact-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        color: white;
+        font-size: 90px;
+    }
+
+    hr {
+        width: 500px;
+        height: 4px;
+        background-color: #00BEE8;
+        border: none;
+        border-radius: 4px;
+        margin: 0;
+    }
+}
+
+
+.contact-context {
+    display: flex;
+    justify-content: space-between;
+
+    .problem-section {
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+
+        .problem-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+           
+            h3 {
+                font-size: 32px;
+            }
+
+            hr {
+                width: 50px;
+                height: 4px;
+                background-color: #1CE6B6;
+                border: none;
+                border-radius: 4px;
+                margin: 0;
+            }
+        }
+
+        p {
+            margin-left: 60px;
+        }
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+    }
+}
