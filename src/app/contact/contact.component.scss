@@ -1,5 +1,14 @@
 .contact-container {
     background-color: #141D2F;
+    position: relative;
+
+    .shadow {
+        position: absolute;
+        right: -200px;
+        bottom: -170px;
+        height: 500px;
+        overflow: hidden;
+    }
 }
 
 .contact-header {
@@ -38,9 +47,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
-           
+
             h3 {
                 font-size: 32px;
+                margin: 0;
             }
 
             hr {
@@ -61,5 +71,51 @@
     .form-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        margin-right: 50px;
+
+
+        input,
+        textarea {
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: solid 1px;
+            border-color: #4B47FF;
+            background-color: #141D2F;
+            min-width: 600px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+
+            &:hover {
+                border-color: #1CE6B6;
+                cursor: pointer;
+            }
+        }
+
+        textarea {
+            min-height: 200px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .btn-send {
+            padding: 15px 30px;
+            background-color: #00BEE8;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            font-size: 24px;
+            transition: all 125ms ease-in-out;
+            width: 250px;
+            margin-bottom: 50px;
+
+            &:hover {
+                background-color: #4B47FF;
+                scale: 1.1;
+            }
+        }
     }
 }

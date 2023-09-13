@@ -1,9 +1,10 @@
-<header>
-    <img src="assets/phil_logo.png">
+<header id="header">
+    <img (click)="goDown('header')" src="assets/phil_logo.png">
 
     <div>
-        <a routerLink="/">About me</a>
-        <a routerLink="/">Skills</a>
-        <a href="#">Projects</a>
+        <a (click)="goDown('about-me')" >About me</a>
+        <a (click)="goDown('skills')">Skills</a>
+        <a (click)="goDown('projects')">Projects</a>
+        <a (click)="goDown('contact')">Contact</a>
     </div>
 </header>

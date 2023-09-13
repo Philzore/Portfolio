@@ -8,7 +8,7 @@
 }
 
 
-.portfolio-text-container{
+.portfolio-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,21 +40,121 @@
     }
 }
 
-.project-container{
+.project-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .line-1,.line-2 {
+    .projects {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
-        margin-bottom: 10px;
-    }
+        margin-left: 60px;
+        margin-right: 60px;
 
-    .projects {
-        
+        .single-project {
+            position: relative;
+            display: flex;
+            transition: all 125ms ease-in-out;
+
+            img {
+                @media (max-width: 1340px) {
+                    height: 400px;
+                }
+            }
+
+            &:hover {
+
+                img {
+                    opacity: 0.5;
+                    transition: all 125ms ease-in-out;
+                }
+
+                .mouse-over-dialog {
+                    display: flex !important;
+
+                }
+            }
+        }
+
+        .mouse-over-dialog {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            height: 100%;
+            width: 100%;
+
+            .project-btns {
+                display: flex;
+                margin-bottom: 100px;
+                gap: 50px;
+
+                button {
+                    padding: 15px 30px;
+                    color: white;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 24px;
+                    transition: all 125ms ease-in-out;
+                }
+
+                .btn-github {
+                    background-color: #141D2F;
+                    border: solid 1px #00BEE8;
+
+                    &:hover {
+                        background-color: #00BEE8;
+                        scale: 1.1;
+                    }
+                }
+
+                .btn-live-test {
+                    background-color: #4B47FF;
+
+                    &:hover {
+                        background-color: #00BEE8;
+                        scale: 1.1;
+                    }
+                }
+            }
+
+            .project-info {
+                background-color: whitesmoke;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                height: 400px;
+                width: 100%;
+                padding: 65px 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                text-align: center;
+
+                h4 {
+                    color: #4B47FF;
+                    font-size: 32px;
+                }
+
+                p {
+                    font-size: 24px;
+                }
+
+                span {
+                    color: #00BEE8;
+                    font-size: 24px;
+                }
+            }
+        }
+
     }
 
     .filter-links {
@@ -76,11 +176,11 @@
                 background: #4B47FF;
                 transition: width .3s;
             }
-    
+
             &:hover::after {
                 width: 100%;
             }
-    
+
             &:hover {
                 color: #00BEE8;
                 border-bottom: solid 3px;

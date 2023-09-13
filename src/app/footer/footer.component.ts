@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  openLink (link:string) {
+    window.open(link) ;
+  }
 }
