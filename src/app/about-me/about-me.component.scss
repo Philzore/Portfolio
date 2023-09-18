@@ -57,3 +57,14 @@
 .d-flex {
     display: flex;
 }
+
+.profile-img {
+    position: relative;
+
+    .profile {
+        position: absolute;
+        height: 600px;
+        right: 100px;
+        bottom: 180px;
+    }
+}

@@ -1,9 +1,15 @@
+.vector-bg {
+    @media(max-width: 1050px) {
+        background-color: #141D2F;
+    }
+}
+
 
 .skill-container {
     display: flex;
     justify-content: space-between;
     margin-top: -670px;
-    background-color: #141D2F;
+    position: relative;
 
     @media(max-width: 1050px) {
         justify-content: center;
@@ -130,7 +136,7 @@
 .vector {
     margin-top: -350px;
     width: 100%;
-    
+    position: relative;
 
     @media (max-width: 1400px) {
         width: auto;

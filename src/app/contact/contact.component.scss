@@ -100,6 +100,31 @@
             position: relative;
         }
 
+        .purple {
+            color: #4B47FF;
+        }
+
+        .checkbox {
+            accent-color: #00BEE8;
+            width: 24px ;
+            min-width: 0 !important;
+
+            &::before{
+                background-color: #141D2F;
+            }
+        }
+
+        span {
+            color: white;
+        }
+
+        .check-privacy {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+
         .btn-send {
             padding: 15px 30px;
             background-color: #00BEE8;

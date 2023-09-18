@@ -13,7 +13,7 @@ export class PortfolioComponent {
     description: 'Task manager inspired by the Kanban System.Create and organize tasks using drag and dropfunctions, assign users and categories.',
     languages: 'HTML | CSS | JavaScript' ,
     githubLink: 'https://github.com/Philzore/join',
-    liveLink: ''
+    liveLink: 'https://join.philippmoessl.de/templates/html/login.html'
   },
   {
     name : 'El Pollo Loco',
@@ -21,7 +21,7 @@ export class PortfolioComponent {
     description: 'Jump,run and throw game based on object,oriented approach.Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     languages: 'HTML | CSS | JavaScript' ,
     githubLink: 'https://github.com/Philzore/ell_pollo_loco',
-    liveLink: ''
+    liveLink: 'htttps://elpollolocco.philippmoessl.de/index.html'
   },
   {
     name : 'Simple CRM',
@@ -37,7 +37,7 @@ export class PortfolioComponent {
     description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
     languages: 'HTML | CSS | JavaScript | API' ,
     githubLink: 'https://github.com/Philzore/Pokedex',
-    liveLink: ''
+    liveLink: 'https://pokedex.philippmoessl.de/index.html'
   }
 ];
 
