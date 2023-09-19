@@ -28,6 +28,13 @@
     width: 100vw;
     overflow: hidden;
     display: flex;
+    justify-content: space-between;
+
+    @media (max-width:1065px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .about-me-text {
@@ -35,6 +42,10 @@
     flex-direction: column;
     max-width: 470px;
     margin-left: 50px;
+
+    @media (max-width:1065px) {
+        margin-left: 0;
+    }
 
     h2 {
         font-size: 90px;
@@ -50,9 +61,7 @@
     }
 }
 
-.vector {
-    width: 100%;
-}
+
 
 .d-flex {
     display: flex;
@@ -63,8 +72,22 @@
 
     .profile {
         position: absolute;
-        height: 600px;
-        right: 100px;
-        bottom: 180px;
+        height: 800px;
+        right: -50px;
+        bottom: 150px;
+
+        @media (max-width:1340px) {
+            bottom: 0;
+            height: 600px;
+        }
     }
+
+    .shadow {
+
+        @media (max-width:1340px) {
+            width: 600px;
+        }
+    }
+
+
 }
