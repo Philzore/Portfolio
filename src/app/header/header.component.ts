@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @ViewChild('myLinks') myLinks:ElementRef;
 
   constructor(private viewportScroller: ViewportScroller) {
 
@@ -15,5 +16,14 @@ export class HeaderComponent {
 
   goDown(id) {
     this.viewportScroller.scrollToAnchor(id);
+    this.myLinks.nativeElement.style.display = "none";
+  }
+
+  openMenu() {
+    if (this.myLinks.nativeElement.style.display === "flex") {
+      this.myLinks.nativeElement.style.display = "none";
+    } else {
+      this.myLinks.nativeElement.style.display = "flex";
+    }
   }
 }

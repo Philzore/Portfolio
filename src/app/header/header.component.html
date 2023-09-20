@@ -1,10 +1,26 @@
-<header id="header">
-    <img (click)="goDown('header')" src="assets/phil_logo.png">
-
-    <div>
-        <a (click)="goDown('about-me')" >About me</a>
-        <a (click)="goDown('skills')">Skills</a>
-        <a (click)="goDown('projects')">Projects</a>
-        <a (click)="goDown('contact')">Contact</a>
+<header>
+    <div class="desktop-nav">
+        <img (click)="goDown('header')" src="assets/phil_logo.png">
+        <div>
+            <a (click)="goDown('about-me')">About me</a>
+            <a (click)="goDown('skills')">Skills</a>
+            <a (click)="goDown('projects')">Projects</a>
+            <a (click)="goDown('contact')">Contact</a>
+        </div>
     </div>
+
+    <div class="mobile-nav">
+        <div class="header-nav">
+            <img (click)="goDown('header')" src="assets/phil_logo.png">
+            <img class="burger-menu" src="assets/icons/menu.ico" (click)="openMenu()">
+        </div>
+
+        <div class="mobile-links" #myLinks>
+            <a (click)="goDown('about-me')">About me</a>
+            <a (click)="goDown('skills')">Skills</a>
+            <a (click)="goDown('projects')">Projects</a>
+            <a (click)="goDown('contact')">Contact</a>
+        </div>
+    </div>
+
 </header>

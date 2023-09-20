@@ -43,10 +43,6 @@
     max-width: 470px;
     margin-left: 50px;
 
-    @media (max-width:1065px) {
-        margin-left: 0;
-    }
-
     h2 {
         font-size: 90px;
         color: white;
@@ -58,6 +54,16 @@
 
     img {
         margin-right: 20px;
+    }
+
+    @media (max-width:1065px) {
+        margin-left: 0;
+    }
+
+    @media (max-width:1065px) {
+        h2 {
+            margin: 0;
+        }
     }
 }
 

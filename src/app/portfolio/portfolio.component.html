@@ -13,50 +13,26 @@
             <a href="">Angular</a>
             <a href="">JavaScript</a>
         </div>
-        <!-- <div class="projects">
-            <div class="line-1">
-                <div class="single-project">
-                    <img src="/assets/projects/Join_default.png">
-                    <div class="mouse-over-dialog">
-                        <div class="project-btns">
-                            <button class="btn-github">Github</button>
-                            <button class="btn-live-test">Live Test</button>
-                        </div>
-                        <div class="project-info">
-                            <h4>Join</h4>
-                            <p>Task manager inspired by the Kanban<br>
-                                System.Create and organize tasks using drag and drop
-                                functions,assign users and categories.</p>
-                            <span>HTML | CSS | JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <img src="/assets/projects/Pollo_loco_default.png">
-            </div>
-            <div class="line-2">
-                <img src="/assets/projects/Simple_CRM_default.png">
-                <img src="/assets/projects/Pokedex_default.png">
-            </div>
-        </div> -->
-        <!-- Test mit ngFor -->
         <div class="projects">
-            <!-- <div class="line-1"> -->
-                <div *ngFor="let currentProject of projects" class="single-project">
-                    <img src="{{  currentProject['img'] }}">
-                    <div class="mouse-over-dialog">
-                        <div class="project-btns">
-                            <button (click)="openLink(currentProject['githubLink'])" class="btn-github">Github</button>
-                            <button (click)="openLink(currentProject['liveLink'])" class="btn-live-test">Live Test</button>
-                        </div>
-                        <div class="project-info">
-                            <h4>{{ currentProject['name'] }}</h4>
-                            <p>{{ currentProject['description'] }}</p>
-                            <span>{{ currentProject['languages'] }}</span>
-                        </div>
+            <div *ngFor="let currentProject of projects" class="single-project">
+                <img src="{{  currentProject['img'] }}">
+                <div class="mouse-over-dialog">
+                    <div class="project-btns">
+                        <button (click)="openLink(currentProject['githubLink'])" class="btn-github">Github</button>
+                        <button (click)="openLink(currentProject['liveLink'])" class="btn-live-test">Live Test</button>
+                    </div>
+                    <div class="project-info">
+                        <h4>{{ currentProject['name'] }}</h4>
+                        <p>{{ currentProject['description'] }}</p>
+                        <span>{{ currentProject['languages'] }}</span>
                     </div>
                 </div>
-            <!-- </div> -->
+            </div>
         </div>
-        <!-- Ende test -->
+        <img class="shadow-right" src="assets/shadows/shadow_1.png">
+        <img class="shadow-left" src="assets/shadows/shadow_2.png">
     </div>
 </div>
+<!-- <div class="vector-bg">
+    <img class="vector" src="/assets/shadows/vector.png">
+</div> -->

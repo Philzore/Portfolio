@@ -1,7 +1,7 @@
 .portfolio-container {
     display: flex;
     flex-direction: column;
-
+    position: relative;
     background-color: #141D2F;
     margin-top: -120px;
     padding-top: 200px;
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    z-index: 1;
 
     .portfolio-header {
         display: flex;
@@ -26,12 +27,24 @@
             border-radius: 4px;
             margin: 0;
         }
+
+        @media (max-width:850px) {
+            flex-direction: column-reverse;
+            margin-bottom: 20px;
+
+            hr {
+                width: 100%;
+            }
+        }
     }
 
     h2 {
         color: white;
         font-size: 90px;
         margin: 0;
+        @media (max-width: 450px) {
+            font-size: 64px;
+        }
     }
 
     p {
@@ -42,10 +55,12 @@
 }
 
 .project-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 
     .projects {
         display: flex;
@@ -54,6 +69,8 @@
         gap: 10px;
         margin-left: 60px;
         margin-right: 60px;
+        position: relative;
+        z-index: 2;
 
         .single-project {
             position: relative;
@@ -64,13 +81,13 @@
                 @media (max-width: 1340px) {
                     height: 400px;
                 }
+
                 @media (max-width: 500px) {
                     height: 300px;
                 }
             }
 
             &:hover {
-
                 img {
                     opacity: 0.5;
                     transition: all 125ms ease-in-out;
@@ -78,7 +95,6 @@
 
                 .mouse-over-dialog {
                     display: flex !important;
-
                 }
             }
         }
@@ -109,6 +125,10 @@
                     border-radius: 10px;
                     font-size: 24px;
                     transition: all 125ms ease-in-out;
+
+                    @media (max-width:500px) {
+                        font-size: 16px;
+                    }
                 }
 
                 .btn-github {
@@ -168,6 +188,17 @@
                 @media (max-width:1340px) {
                     height: 300px;
                 }
+
+                @media (max-width:500px) {
+                    height: 200px;
+
+                    h4 {
+                        font-size: 24px;
+                    }
+                    p,span {
+                        font-size: 16px;
+                    }
+                }
             }
         }
 
@@ -177,6 +208,8 @@
         display: flex;
         gap: 50px;
         margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
 
         a {
             text-decoration: none;
@@ -205,4 +238,32 @@
             }
         }
     }
+
+    .shadow-right {
+        position: absolute;
+        right: -370px;
+        top: -400px;
+    }
+
+    .shadow-left {
+        position: absolute;
+        left: -500px;
+        bottom: -300px;
+        z-index: 1;
+    }
+
+    // .vector {
+    //     margin-top: -350px;
+    //     width: 100%;
+    //     position: relative;
+    
+    //     @media (max-width: 1400px) {
+    //         width: auto;
+    //     }
+    
+    //     @media (max-width:1340px) {
+    //         margin-top: -180px;
+    //     }
+    // }
+    
 }
