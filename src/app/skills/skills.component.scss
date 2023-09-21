@@ -23,6 +23,8 @@
     flex-wrap: wrap;
     gap: 50px;
     margin-left: 50px;
+    position: relative;
+    z-index: 1;
 
     @media(max-width: 1050px) {
         margin-left: 0;

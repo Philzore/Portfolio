@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  @ViewChild('project0') project0:ElementRef;
 
   projects = [{
     name: 'Join',
@@ -43,6 +44,17 @@ export class PortfolioComponent {
 
 openLink (link:string) {
   window.open(link) ;
+
+  if (this.projects[0].languages.includes('API')) {
+    console.log('yes') ;
+  } else {
+    console.log('no') ;
+  }
+  this.project0.nativeElement.innerhtml = 'Bimmelbahn' ;
+}
+
+filterProject(language) {
+
 }
   
 

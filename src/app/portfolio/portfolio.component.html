@@ -14,7 +14,7 @@
             <a href="">JavaScript</a>
         </div>
         <div class="projects">
-            <div *ngFor="let currentProject of projects" class="single-project">
+            <div *ngFor="let currentProject of projects; let i = index" class="single-project" #project{{i}}>
                 <img src="{{  currentProject['img'] }}">
                 <div class="mouse-over-dialog">
                     <div class="project-btns">

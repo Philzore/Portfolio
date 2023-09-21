@@ -25,7 +25,6 @@
 
 .about-me-section {
     background-color: #141D2F;
-    width: 100vw;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -58,6 +57,7 @@
 
     @media (max-width:1065px) {
         margin-left: 0;
+        padding: 10px;
     }
 
     @media (max-width:1065px) {

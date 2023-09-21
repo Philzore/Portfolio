@@ -10,11 +10,18 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   @ViewChild('myLinks') myLinks:ElementRef;
 
-  constructor(private viewportScroller: ViewportScroller) {
+  constructor(private viewportScroller: ViewportScroller, public router: Router) {
 
   }
 
+ 
+
   goDown(id) {
+    if (window.innerWidth <= 660) {
+      this.viewportScroller.setOffset([0,100]) ;
+    } else {
+      this.viewportScroller.setOffset([0,0]) ;
+    }
     this.viewportScroller.scrollToAnchor(id);
     this.myLinks.nativeElement.style.display = "none";
   }
