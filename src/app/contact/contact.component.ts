@@ -11,57 +11,143 @@ export class ContactComponent {
   @ViewChild('messageField') messageField: ElementRef;
   @ViewChild('mailField') mailField: ElementRef;
   @ViewChild('sendButton') sendButton: ElementRef;
+  @ViewChild('policyCheckbox') policyCheckbox: ElementRef;
 
-  @Input() sentSuccess = false;
-  @Input() nameError = false;
-  @Input() mailError = false;
-  @Input() messageError = false;
+
+  sentSuccess = false;
+  nameError = false;
+  nameErrorMsgs = ['Name is required', 'Name is to short'];
+  nameErrorMsg = '';
+
+  mailError = false;
+  mailErrorMsgs = ['Your mail is empty', 'Your mail address ist not plausible'];
+  mailErrorMsg = '';
+
+  messageError = false;
+  messageErrorMsg = '';
+
+  privacyError = false;
+  privacyErrorMsg = '';
+
 
   async sendMail() {
-    //
-    console.log(this.myForm);
+    this.resetError();
     let nameField = this.nameField.nativeElement; //gleiche wie getElementById
     let mailField = this.mailField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    nameField.disabled = true;
-    mailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
 
-    let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('message', messageField.value);
-    fd.append('mail', mailField.value);
+    this.disableFields(nameField, mailField, messageField, sendButton, true);
+    this.checkInputs(nameField, mailField, messageField);
 
-    //send
+    if (!this.checkErrors()) {
+      console.log('Mail gesendet');
+      let fd = new FormData();
+      fd.append('name', nameField.value);
+      fd.append('message', messageField.value);
+      fd.append('mail', mailField.value);
 
-    await fetch('https://philipp-moessl.developerakademie.net/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: fd,
-      });
+      //send
+      await fetch('https://philipp-moessl.developerakademie.net/send_mail/send_mail.php',
+        {
+          method: 'POST',
+          body: fd,
+        });
 
-    //check inputs
-    console.log(nameField.value);
+      //Nachricht gesendet
+      this.sentSuccess = true;
+
+    } else {
+      console.log('Mail nicht gesendet');
+    }
+    this.disableFields(nameField, mailField, messageField, sendButton, false);
+
+    setTimeout(() => {
+      nameField.value = '';
+      mailField.value = '';
+      messageField.value = '';
+      this.sentSuccess = false;
+    }, 1000);
+
+  }
+
+  resetError() {
+    this.sentSuccess = false;
+    this.nameError = false;
+    this.mailError = false;
+    this.messageError = false;
+    this.privacyError = false;
+    this.nameErrorMsg = '';
+    this.mailErrorMsg = '';
+  }
+
+  disableFields(nameField, mailField, messageField, sendButton, disable: boolean) {
+    nameField.disabled = disable;
+    mailField.disabled = disable;
+    messageField.disabled = disable;
+    sendButton.disabled = disable;
+  }
+
+  checkInputs(nameField, mailField, messageField) {
+    this.nameErrors(nameField);
+    this.mailErrors(mailField);
+    this.messageErrors(messageField);
+    this.privacyErrors();
+  }
+
+  nameErrors(nameField) {
     if (nameField.value == '') {
+      this.nameErrorMsg = this.nameErrorMsgs[0];
+    } else if (nameField.value.length <= 3) {
+      this.nameErrorMsg = this.nameErrorMsgs[1];
+    }
+
+    if (this.nameErrorMsg !== '') {
       this.nameError = true;
     } else {
       this.nameError = false;
     }
-    if (mailField.value == '') {
-
-    }
-    if (messageField.value == '') {
-
-    }
-
-
-    //Nachricht gesendet
-    this.sentSuccess = true;
-    nameField.disabled = false;
-    mailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
   }
+
+  mailErrors(mailField) {
+    if (mailField.value == '') {
+      this.mailErrorMsg = this.mailErrorMsgs[0];
+    } else if (!mailField.value.includes('@')) {
+      this.mailErrorMsg = this.mailErrorMsgs[1];
+    }
+
+    if (this.mailErrorMsg !== '') {
+      this.mailError = true;
+    } else {
+      this.mailError = false;
+    }
+  }
+
+  messageErrors(messageField) {
+    if (messageField.value == '') {
+      this.messageErrorMsg = 'Your Message is empty';
+      this.messageError = true;
+    } else {
+      this.messageErrorMsg = '';
+      this.messageError = false;
+    }
+  }
+
+  privacyErrors() {
+    let checkbox = this.policyCheckbox.nativeElement;
+    if (!checkbox.checked) {
+      this.privacyErrorMsg = 'Please accept the privacy policy';
+      this.privacyError = true;
+    } else {
+      this.privacyErrorMsg = '';
+      this.privacyError = false;
+    }
+
+  }
+
+  checkErrors() {
+    return (this.nameError || this.mailError || this.messageError);
+  }
+
+
 }

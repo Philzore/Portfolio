@@ -9,12 +9,12 @@
     </div>
     <div class="project-container">
         <div class="filter-links">
-            <a href="">All</a>
-            <a href="">Angular</a>
-            <a href="">JavaScript</a>
+            <a (click)="filterProject('test')">All</a>
+            <a>Angular</a>
+            <a>JavaScript</a>
         </div>
         <div class="projects">
-            <div *ngFor="let currentProject of projects; let i = index" class="single-project" #project{{i}}>
+            <div *ngFor="let currentProject of projects; let i = index" class="single-project" id='project{{i}}' >
                 <img src="{{  currentProject['img'] }}">
                 <div class="mouse-over-dialog">
                     <div class="project-btns">

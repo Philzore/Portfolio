@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  @ViewChild('project0') project0:ElementRef;
+  @ViewChild('project1') project1:ElementRef;
 
   projects = [{
     name: 'Join',
@@ -50,11 +50,13 @@ openLink (link:string) {
   } else {
     console.log('no') ;
   }
-  this.project0.nativeElement.innerhtml = 'Bimmelbahn' ;
+ 
 }
 
 filterProject(language) {
-
+  let currentProject = document.getElementById('project1');
+  // currentProject.innerhtml = 'Bimmelbahn' ;
+  console.log(currentProject);
 }
   
 

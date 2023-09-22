@@ -98,13 +98,25 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 35px;
+        gap: 10px;
         margin-right: 50px;
 
         @media (max-width:800px) {
             margin-right: 0;
         }
 
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-text-fill-color: white;
+            -webkit-box-shadow: 0 0 0px 1000px #141D2F inset;
+        }
 
         input,
         textarea {
@@ -117,6 +129,9 @@
             min-width: 600px;
             font-size: 16px;
             font-family: "Poppins", sans-serif;
+
+
+
 
             &:hover {
                 border-color: #1CE6B6;
@@ -132,6 +147,20 @@
             min-height: 200px;
             z-index: 1;
             position: relative;
+            resize: none;
+        }
+
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-error {
+            color: red;
+            font-size: 16px;
+            font-weight: bold;
+            min-height: 20px;
         }
 
         .purple {
@@ -152,6 +181,14 @@
 
         span {
             color: white;
+        }
+
+        .policy-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+            z-index: 1;
         }
 
         .check-privacy {
@@ -191,14 +228,22 @@
         border-color: #70E61C !important;
         background-image: url('../../assets/icons/form_ok.png');
         background-repeat: no-repeat;
-        background-position: right;
+        background-position-x: 95%;
+        background-position-y: center;
+        box-shadow: none;
+        
+    }
+
+    .sent-error {
+        border-color: red !important;
+        background-image: url('../../assets/icons/form_nok.png');
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: center;
 
         textarea {
-            background-position: top;
+            background-position-y: 5% !important;
         }
     }
 
-    .ng-invalid:not(form) {
-        border-color: red !important;
-    }
 }
