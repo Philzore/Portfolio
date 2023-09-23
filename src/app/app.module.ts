@@ -36,7 +36,7 @@ import { MainComponent } from './main/main.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

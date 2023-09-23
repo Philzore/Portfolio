@@ -9,9 +9,9 @@
     </div>
     <div class="project-container">
         <div class="filter-links">
-            <a (click)="filterProject('test')">All</a>
-            <a>Angular</a>
-            <a>JavaScript</a>
+            <a (click)="filterProject('all')">All</a>
+            <a (click)="filterProject('Angular')">Angular</a>
+            <a (click)="filterProject('JavaScript')">JavaScript</a>
         </div>
         <div class="projects">
             <div *ngFor="let currentProject of projects; let i = index" class="single-project" id='project{{i}}' >

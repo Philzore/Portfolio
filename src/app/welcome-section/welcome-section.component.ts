@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-welcome-section',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class WelcomeSectionComponent {
 
+  constructor(private header:HeaderComponent) {}
+
+
+  goToAnchor(id) {
+    this.header.goDown(id);
+  }
 }

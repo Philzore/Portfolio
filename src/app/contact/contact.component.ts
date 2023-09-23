@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef, Input } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-contact',
@@ -29,6 +30,13 @@ export class ContactComponent {
   privacyError = false;
   privacyErrorMsg = '';
 
+  constructor(private header:HeaderComponent) {
+
+  }
+
+  goToAnchor(id:string) {
+    this.header.goDown(id);
+  }
 
   async sendMail() {
     this.resetError();

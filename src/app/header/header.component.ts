@@ -8,22 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @ViewChild('myLinks') myLinks:ElementRef;
+  @ViewChild('myLinks') myLinks: ElementRef;
 
   constructor(private viewportScroller: ViewportScroller, public router: Router) {
 
   }
 
- 
 
-  goDown(id) {
+
+  goDown(id: string) {
     if (window.innerWidth <= 660) {
-      this.viewportScroller.setOffset([0,100]) ;
+      this.viewportScroller.setOffset([0, 100]);
     } else {
-      this.viewportScroller.setOffset([0,0]) ;
+      this.viewportScroller.setOffset([0, 0]);
     }
     this.viewportScroller.scrollToAnchor(id);
-    this.myLinks.nativeElement.style.display = "none";
+    if (this.myLinks) {
+      this.myLinks.nativeElement.style.display = "none";
+    }
   }
 
   openMenu() {

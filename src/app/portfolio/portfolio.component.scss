@@ -28,7 +28,10 @@
             margin: 0;
         }
 
-        @media (max-width:850px) {
+        @media(max-width: 1050px) {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             flex-direction: column-reverse;
             margin-bottom: 20px;
 
@@ -159,7 +162,7 @@
                 border-bottom-left-radius: 15px;
                 height: 400px;
                 width: 100%;
-                padding: 65px 45px;
+                padding: 45px 25px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -178,6 +181,7 @@
 
                 p {
                     font-size: 24px;
+                    margin: 0;
                 }
 
                 span {
@@ -231,6 +235,7 @@
             }
 
             &:hover {
+                cursor: pointer;
                 color: #00BEE8;
                 border-bottom: solid 3px;
                 border-bottom: #4B47FF;

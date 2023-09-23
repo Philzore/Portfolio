@@ -1,16 +1,26 @@
-<div class="social-buttons">
-    <hr>
-    <img (click)="openLink('https://github.com/Philzore')" src="assets/icons/github.svg">
-    <img src="assets/icons/mail.svg">
-    <img src="assets/icons/linkedin.svg">
+<div class="above-aboutme">
+    <div class="social-buttons">
+        <hr>
+        <img (click)="openLink('https://github.com/Philzore')" src="assets/icons/github.svg">
+        <img src="assets/icons/mail.svg">
+        <img src="assets/icons/linkedin.svg">
+    </div>
+    <div>
+        <img (click)="goToAnchor('contact')" class="arrow-down" src="assets/icons/arrow_down.ico">
+    </div>
 </div>
 
 <div class="about-me-section">
     <div class="about-me-text">
-        <h2>About me</h2>
-        <p>Hi, I am a junior Front-End developer based in Neugersdorf, Germany. I have gained experience in developing Web
+        <div>
+            <h2>About me</h2>
+            <hr>
+        </div>
+        <p>Hi, I am a junior Front-End developer based in Neugersdorf, Germany. I have gained experience in developing
+            Web
             and Mobile applications with Angular and Javascript. Since i´am a Robot programer i have always
-            been fascinated in IT and especially programming. So I used the chance in Developer Akademie to dive into new
+            been fascinated in IT and especially programming. So I used the chance in Developer Akademie to dive into
+            new
             projects and challanges. Now my enthusiasm turned into a passion. </p>
         <div class="d-flex">
             <img src="assets/icons/bulb.svg">

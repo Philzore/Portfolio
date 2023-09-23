@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-about-me',
@@ -6,8 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+
+  constructor(private header:HeaderComponent) {
+
+  }
   
-  openLink (link:string) {
-    window.open(link) ;
+  goToAnchor(anchor) {
+    this.header.goDown(anchor);
+  }
+  
+  openLink(link: string) {
+    window.open(link);
   }
 }

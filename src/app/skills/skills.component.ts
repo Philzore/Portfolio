@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-skills',
@@ -53,4 +54,10 @@ export class SkillsComponent {
     text: 'HTML'
   }
   ];
+
+  constructor(private header: HeaderComponent) { }
+
+  goToAnchor(id) {
+    this.header.goDown(id);
+  }
 }

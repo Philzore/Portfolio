@@ -33,7 +33,7 @@
         margin: 0;
     }
 
-    @media (max-width:850px) {
+    @media (max-width:1050px) {
         flex-direction: column;
         margin-bottom: 20px;
 
@@ -100,6 +100,7 @@
         align-items: center;
         gap: 10px;
         margin-right: 50px;
+        position: relative;
 
         @media (max-width:800px) {
             margin-right: 0;
@@ -220,6 +221,29 @@
             &:hover {
                 background-color: #4B47FF;
                 scale: 1.1;
+            }
+        }
+
+        .arrow-up{
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+            }
+
+            @media(max-width: 1180px) {
+                height: 48px;
+            }
+
+            @media(max-width: 800px) {
+                right: -100px;
+            }
+
+            @media(max-width: 590px) {
+                display: none;
             }
         }
     }

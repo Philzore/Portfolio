@@ -1,27 +1,37 @@
-.social-buttons {
-    background-color: #141D2F;
+.above-aboutme {
     display: flex;
-    align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    background-color: #141D2F;
 
-    hr {
-        margin: 0;
-        width: 100px;
-        height: 4px;
-        background-color: #00BEE8;
-        border: none;
-        border-radius: 4px;
+    .social-buttons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        hr {
+            margin: 0;
+            width: 100px;
+            height: 4px;
+            background-color: #00BEE8;
+            border: none;
+            border-radius: 4px;
+        } 
+    }
+
+    .arrow-down {
+        height: 64px;
     }
 
     img {
         transition: all 125ms ease-in-out;
-
         &:hover {
             cursor: pointer;
             scale: 1.2;
         }
     }
 }
+
+
 
 .about-me-section {
     background-color: #141D2F;
@@ -45,6 +55,11 @@
     h2 {
         font-size: 90px;
         color: white;
+        margin: 0;
+    }
+
+    hr {
+        display: none;
     }
 
     p {
@@ -55,12 +70,21 @@
         margin-right: 20px;
     }
 
-    @media (max-width:1065px) {
+    @media (max-width:1050px) {
         margin-left: 0;
         padding: 10px;
+
+        hr {
+            display: flex;
+            width: 100vw;
+            height: 4px;
+            background-color: #1CE6B6;
+            border: none;
+            border-radius: 4px;
+        }
     }
 
-    @media (max-width:1065px) {
+    @media (max-width:1050px) {
         h2 {
             margin: 0;
         }
@@ -80,7 +104,7 @@
         position: absolute;
         height: 800px;
         right: -50px;
-        bottom: 150px;
+        bottom: 70px;
 
         @media (max-width:1340px) {
             bottom: 0;
