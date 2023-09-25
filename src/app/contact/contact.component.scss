@@ -22,6 +22,9 @@
         margin: 0;
         color: white;
         font-size: 90px;
+        @media (max-width: 450px) {
+            font-size: 64px;
+        }
     }
 
     hr {
@@ -166,6 +169,9 @@
 
         .purple {
             color: #4B47FF;
+            @media (max-width: 1180px) {
+               color:  #1CE6B6 ;
+            }
         }
 
         .checkbox {

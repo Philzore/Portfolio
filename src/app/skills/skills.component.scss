@@ -7,7 +7,7 @@
         width: auto;
     }
 
-    @media (max-width:1340px) {
+    @media (max-width:1380px) {
         margin-top: -180px;
     }
 }
@@ -48,7 +48,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-left: 50px;
+    margin-left: calc((124px / 2) - 32px);
     position: relative;
     z-index: 1;
 
@@ -149,6 +149,9 @@
         color: white;
         font-size: 90px;
         margin: 0;
+        @media (max-width: 450px) {
+            font-size: 64px;
+        }
     }
 
     p {

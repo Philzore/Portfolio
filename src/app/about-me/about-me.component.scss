@@ -15,7 +15,7 @@
             background-color: #00BEE8;
             border: none;
             border-radius: 4px;
-        } 
+        }
     }
 
     .arrow-down {
@@ -24,6 +24,7 @@
 
     img {
         transition: all 125ms ease-in-out;
+
         &:hover {
             cursor: pointer;
             scale: 1.2;
@@ -51,11 +52,16 @@
     flex-direction: column;
     max-width: 470px;
     margin-left: 50px;
+    width: 100%;
 
     h2 {
         font-size: 90px;
         color: white;
         margin: 0;
+
+        @media (max-width: 450px) {
+            font-size: 64px;
+        }
     }
 
     hr {
@@ -76,11 +82,18 @@
 
         hr {
             display: flex;
-            width: 100vw;
+            width: 3000px;
             height: 4px;
             background-color: #1CE6B6;
             border: none;
             border-radius: 4px;
+            position: relative;
+            left: -100%;
+        }
+
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 
@@ -100,22 +113,33 @@
 .profile-img {
     position: relative;
 
+
+
     .profile {
         position: absolute;
         height: 800px;
         right: -50px;
         bottom: 70px;
 
-        @media (max-width:1340px) {
+        @media (max-width:1380px) {
             bottom: 0;
             height: 600px;
+
         }
+
     }
 
     .shadow {
 
-        @media (max-width:1340px) {
+        @media (max-width:1380px) {
             width: 600px;
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+        }
+
+        @media (max-width:1065px) {
+            position: initial;
         }
     }
 

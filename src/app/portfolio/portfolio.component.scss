@@ -255,20 +255,11 @@
         left: -500px;
         bottom: -300px;
         z-index: 1;
+
+        @media(max-height:1000px){
+            display: none;
+        }
     }
 
-    // .vector {
-    //     margin-top: -350px;
-    //     width: 100%;
-    //     position: relative;
-    
-    //     @media (max-width: 1400px) {
-    //         width: auto;
-    //     }
-    
-    //     @media (max-width:1340px) {
-    //         margin-top: -180px;
-    //     }
-    // }
     
 }

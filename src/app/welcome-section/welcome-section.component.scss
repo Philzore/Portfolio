@@ -12,11 +12,16 @@
 .left-shadow {
     position: absolute;
     left: -230px;
+
+    
 }
 
 .right-shadow {
     position: absolute;
     right: -450px;
+    @media (max-height:1000px) {
+        display: none;
+    }
 }
 
 .text-area {
@@ -55,7 +60,7 @@
 
     @media (max-width:640px) {
         h1, span {
-            font-size: 48px;
+            font-size: 38px;
         }
 
         h2 {
@@ -77,6 +82,11 @@
 .i-am {
     transform: rotate(-90deg);
     font-size: 90px;
+
+    @media (max-width: 460px) {
+        font-size: 16px;
+        min-width: 72px;
+    }
 }
 
 .btn-talk {
@@ -94,6 +104,10 @@
     &:hover {
         background-color: #4B47FF;
         scale: 1.1;
+    }
+
+    @media (max-height:670px) {
+        top: 500px;
     }
 }
 
