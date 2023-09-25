@@ -30,11 +30,11 @@ export class ContactComponent {
   privacyError = false;
   privacyErrorMsg = '';
 
-  constructor(private header:HeaderComponent) {
+  constructor(private header: HeaderComponent) {
 
   }
 
-  goToAnchor(id:string) {
+  goToAnchor(id: string) {
     this.header.goDown(id);
   }
 
@@ -49,12 +49,10 @@ export class ContactComponent {
     this.checkInputs(nameField, mailField, messageField);
 
     if (!this.checkErrors()) {
-      console.log('Mail gesendet');
       let fd = new FormData();
       fd.append('name', nameField.value);
       fd.append('message', messageField.value);
       fd.append('mail', mailField.value);
-
       //send
       await fetch('https://philipp-moessl.developerakademie.net/send_mail/send_mail.php',
         {
@@ -62,21 +60,12 @@ export class ContactComponent {
           body: fd,
         });
 
-      //Nachricht gesendet
       this.sentSuccess = true;
-
-    } else {
-      console.log('Mail nicht gesendet');
+      this.resetField(nameField, mailField, messageField);
     }
+
     this.disableFields(nameField, mailField, messageField, sendButton, false);
-
-    setTimeout(() => {
-      nameField.value = '';
-      mailField.value = '';
-      messageField.value = '';
-      this.sentSuccess = false;
-    }, 1000);
-
+    
   }
 
   resetError() {
@@ -87,6 +76,15 @@ export class ContactComponent {
     this.privacyError = false;
     this.nameErrorMsg = '';
     this.mailErrorMsg = '';
+  }
+
+  resetField(nameField, mailField, messageField) {
+    setTimeout(() => {
+      nameField.value = '';
+      mailField.value = '';
+      messageField.value = '';
+      this.sentSuccess = false;
+    }, 3000);
   }
 
   disableFields(nameField, mailField, messageField, sendButton, disable: boolean) {
@@ -154,8 +152,7 @@ export class ContactComponent {
   }
 
   checkErrors() {
-    return (this.nameError || this.mailError || this.messageError);
+    return (this.nameError || this.mailError || this.messageError || this.privacyError);
   }
-
 
 }

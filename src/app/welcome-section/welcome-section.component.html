@@ -1,4 +1,4 @@
-<div class="welcome-container">
+<div class="welcome-container max-wdth">
     <img class="right-shadow" src="assets/shadows/shadow_3.png">
     <img class="left-shadow" src="assets/shadows/shadow_4.png">
     <div class="text-area">
@@ -6,10 +6,17 @@
             <span>I am</span>
         </div>
         <div class="">
-            <h1>Philipp Mössl</h1>
-            <h2>Frontend Developer</h2> 
+            <div>
+                <h1>Philipp Mössl</h1>
+                <h2>Frontend Developer</h2>
+            </div>
+            
         </div>
+
     </div>
-    <button (click)="goToAnchor('contact')" class="btn-talk">Let´s Talk</button>
-    
+    <div class="btn-container">
+        <button (click)="goToAnchor('contact')" class="btn-talk">Let´s Talk</button>
+    </div>
+
+
 </div>

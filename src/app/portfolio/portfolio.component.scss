@@ -18,14 +18,17 @@
     .portfolio-header {
         display: flex;
         align-items: center;
+        position: relative;
 
         hr {
-            width: 50px;
+            width: 5000px;
             height: 4px;
             background-color: #4B47FF;
             border: none;
             border-radius: 4px;
             margin: 0;
+            position: absolute;
+            left: -5000px;
         }
 
         @media(max-width: 1050px) {

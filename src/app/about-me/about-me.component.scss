@@ -16,10 +16,21 @@
             border: none;
             border-radius: 4px;
         }
+
+        a{
+            text-decoration: none;
+            height: 30px;
+        }
+
     }
 
     .arrow-down {
         height: 64px;
+        margin-right: 20px;
+
+        @media (max-width:380px) {
+            display: none;
+        }
     }
 
     img {
@@ -51,7 +62,6 @@
     display: flex;
     flex-direction: column;
     max-width: 470px;
-    margin-left: 50px;
     width: 100%;
 
     h2 {
@@ -74,6 +84,7 @@
 
     img {
         margin-right: 20px;
+        padding-left: 20px;
     }
 
     @media (max-width:1050px) {
@@ -119,9 +130,9 @@
         position: absolute;
         height: 800px;
         right: -50px;
-        bottom: 70px;
+        bottom: 0px;
 
-        @media (max-width:1380px) {
+        @media (max-width:1435px) {
             bottom: 0;
             height: 600px;
 
@@ -131,7 +142,7 @@
 
     .shadow {
 
-        @media (max-width:1380px) {
+        @media (max-width:1435px) {
             width: 600px;
             position: absolute;
             right: 0;

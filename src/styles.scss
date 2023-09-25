@@ -7,8 +7,42 @@ body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
     overflow-x: hidden;
+    background-color:  #141D2F;
+    scrollbar-width: thin;
+    scrollbar-color: #00BEE8;
 }
 
 .wrapper {
     overflow-x: hidden;
+
+    @media(min-width:1440px) {
+        
+    }
+}
+
+.max-wdth {
+    max-width: 1440px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.096);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background:  #1CDAE6;
+    border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:  #1CDAE6;
 }

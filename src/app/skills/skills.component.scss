@@ -1,5 +1,5 @@
 .vector {
-    margin-top: -250px;
+    margin-top: -200px;
     width: 100%;
     position: relative;
 
@@ -48,7 +48,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    margin-left: calc((124px / 2) - 32px);
     position: relative;
     z-index: 1;
 
@@ -128,13 +127,16 @@
     .skill-header {
         display: flex;
         align-items: center;
+        position: relative;
 
         hr {
-            width: 290px;
+            width: 5000px;
             height: 4px;
             background-color: #1CE6B6;
             border: none;
             border-radius: 4px;
+            position: absolute;
+            left: 250px;
         }
 
         @media(max-width: 1050px) {
