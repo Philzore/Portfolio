@@ -21,7 +21,6 @@
             text-decoration: none;
             height: 30px;
         }
-
     }
 
     .arrow-down {
@@ -42,8 +41,6 @@
         }
     }
 }
-
-
 
 .about-me-section {
     background-color: #141D2F;
@@ -91,6 +88,10 @@
         margin-left: 0;
         padding: 10px;
 
+        h2 {
+            text-align: center;
+        }
+
         hr {
             display: flex;
             width: 3000px;
@@ -115,29 +116,24 @@
     }
 }
 
-
-
 .d-flex {
     display: flex;
 }
 
 .profile-img {
     position: relative;
-
-
-
     .profile {
         position: absolute;
         height: 800px;
         right: -50px;
-        bottom: 0px;
+        bottom: -40px;
+        z-index: 2;
 
         @media (max-width:1435px) {
             bottom: 0;
             height: 600px;
 
         }
-
     }
 
     .shadow {
@@ -153,6 +149,4 @@
             position: initial;
         }
     }
-
-
 }

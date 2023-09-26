@@ -60,11 +60,7 @@ header {
         display: none;
     }
 
-    @media(max-width: 860px) {
-        
-    }
-
-    @media(max-width: 660px) {
+    @media(max-width: 785px) {
         position: fixed;
         background-color: #141D2F;
         z-index: 5;

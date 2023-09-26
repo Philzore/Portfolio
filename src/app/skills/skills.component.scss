@@ -3,11 +3,11 @@
     width: 100%;
     position: relative;
 
-    @media (max-width: 1400px) {
+    @media (max-width: 1440px) {
         width: auto;
     }
 
-    @media (max-width:1380px) {
+    @media (max-width:1400px) {
         margin-top: -180px;
     }
 }
@@ -122,6 +122,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        p {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     .skill-header {
@@ -141,8 +146,11 @@
 
         @media(max-width: 1050px) {
             flex-direction: column;
+
             hr {
                 width: 100vw;
+                position: relative;
+                left: 0;
             }
         }
     }
@@ -151,6 +159,7 @@
         color: white;
         font-size: 90px;
         margin: 0;
+
         @media (max-width: 450px) {
             font-size: 64px;
         }
@@ -184,4 +193,3 @@
         }
     }
 }
-

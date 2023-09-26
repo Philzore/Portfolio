@@ -70,10 +70,11 @@
 
         h2 {
             font-size: 32px;
+            color: #00BEE8;
         }
     }
 
-    @media (max-width:400px) {
+    @media (max-width:500px) {
 
         h1,
         span {
@@ -87,12 +88,19 @@
 }
 
 .i-am {
-    transform: rotate(-90deg);
-    font-size: 90px;
-
-    @media (max-width: 460px) {
-        font-size: 16px;
-        min-width: 72px;
+    transform: rotate(-180deg); 
+    writing-mode: vertical-rl;
+    span {
+        font-size: 90px;
+        @media (max-width: 1050px) {
+            font-size: 60px;
+        }
+        @media (max-width: 640px) {
+            font-size: 40px;
+        }
+        @media (max-width: 500px) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -118,7 +126,7 @@
         }
 
         @media (max-height:670px) {
-            top: 500px;
+            margin-top: 30px;
         }
     }
 
