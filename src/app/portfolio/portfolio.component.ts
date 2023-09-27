@@ -25,12 +25,12 @@ export class PortfolioComponent {
     liveLink: 'https://elpollolocco.philippmoessl.de/index.html'
   },
   {
-    name : 'Simple CRM',
+    name : 'Portfolio',
     img : '/assets/projects/Simple_CRM_default.png',
-    description: 'A very simple customer relationship management system working with CRUD functionality',
-    languages:'HTML | CSS | TypeScript | Angular' ,
-    githubLink: '',
-    liveLink: ''
+    description: 'My Portfolio build with Angular',
+    languages:'HTML | SCSS | TypeScript | Angular' ,
+    githubLink: 'https://github.com/Philzore/philippmoessl.de',
+    liveLink: 'https://philippmoessl.de/'
   },
   {
     name : 'Pokedex',

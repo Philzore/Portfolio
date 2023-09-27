@@ -61,6 +61,8 @@ export class ContactComponent {
         });
 
       this.sentSuccess = true;
+      this.privacyErrorMsg = 'Mail has been sent';
+
       this.resetField(nameField, mailField, messageField);
     }
 
@@ -83,7 +85,9 @@ export class ContactComponent {
       nameField.value = '';
       mailField.value = '';
       messageField.value = '';
+      this.policyCheckbox.nativeElement.checked = false ;
       this.sentSuccess = false;
+      this.privacyErrorMsg = '';
     }, 3000);
   }
 

@@ -19,12 +19,12 @@
             <form (ngSubmit)="sendMail()" method="post" class="form-section" autocomplete="off" ngNativeValidate #myForm>
                 <!-- Name Input -->
                 <div class="input-section">
-                    <input id="name" [class.success]="sentSuccess" [class.sent-error]="nameError" name="name" placeholder="Your name" #nameField>
+                    <input autocomplete="off" id="name" [class.success]="sentSuccess" [class.sent-error]="nameError" name="name" placeholder="Your name" #nameField>
                     <div class="form-error">{{nameErrorMsg}}</div>
                 </div>
                 <!-- Mail Input -->
                 <div class="input-section">
-                    <input [class.success]="sentSuccess" [class.sent-error]="mailError" type="text" name="message" placeholder="Your email" #mailField>
+                    <input autocomplete="off" [class.success]="sentSuccess" [class.sent-error]="mailError" type="text" name="message" placeholder="Your email" #mailField>
                     <div class="form-error">{{mailErrorMsg}}</div>
                 </div>
                 <!-- Message Input -->
@@ -35,14 +35,14 @@
                 <!-- Policy Checkbox -->
                 <div class="policy-content">
                     <div class="check-privacy">
-                        <input class="checkbox" type="checkbox" #policyCheckbox>
+                        <input autocomplete="off" class="checkbox" type="checkbox" #policyCheckbox>
                         <div class="privacy-text">
                             <span>I´ve read the</span>
                             <span class="purple"> privacy policy </span>
                             <span>and agree to the processing of my data as outlined.</span>
                         </div>
                     </div>
-                    <div class="form-error">{{privacyErrorMsg}}</div>
+                    <div [class.sent-ok]="sentSuccess" class="form-error">{{privacyErrorMsg}}</div>
                 </div>
                 <button class="btn-send" type="submit" #sendButton>Send message :)</button> 
                 <img (click)="goToAnchor('welcome')" class="arrow-up" src="assets/icons/arrow_up.ico">

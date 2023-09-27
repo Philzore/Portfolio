@@ -1,5 +1,4 @@
 .contact-container {
-    background-color: #141D2F;
     position: relative;
 
     .shadow {
@@ -139,9 +138,6 @@
             font-size: 16px;
             font-family: "Poppins", sans-serif;
 
-
-
-
             &:hover {
                 border-color: #1CE6B6;
                 cursor: pointer;
@@ -149,6 +145,10 @@
 
             @media (max-width:1180px) {
                 min-width: 300px;
+            }
+
+            @media(max-width:370px) {
+                min-width: 200px;
             }
         }
 
@@ -279,6 +279,10 @@
         textarea {
             background-position-y: 5% !important;
         }
+    }
+
+    .sent-ok {
+        color: green !important;
     }
 
 }
