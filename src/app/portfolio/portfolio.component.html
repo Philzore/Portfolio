@@ -12,6 +12,7 @@
             <a (click)="filterProject('all')">All</a>
             <a (click)="filterProject('Angular')">Angular</a>
             <a (click)="filterProject('JavaScript')">JavaScript</a>
+            <a (click)="filterProject('Django')">Django</a>
         </div>
         <div class="projects">
             <div *ngFor="let currentProject of projects; let i = index" class="single-project" id='project{{i}}' >
@@ -33,6 +34,3 @@
         <img class="shadow-left" src="assets/shadows/shadow_2.png">
     </div>
 </div>
-<!-- <div class="vector-bg">
-    <img class="vector" src="/assets/shadows/vector.png">
-</div> -->

@@ -7,57 +7,59 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  firstRow = [{
-    img: 'javascript.svg',
-    text: 'JavaScript'
-  },
-  {
-    img: 'git.svg',
-    text: 'GIT'
-  },
-  {
-    img: 'scrum.svg',
-    text: 'Scrum'
-  },
-  {
-    img: 'material_design.svg',
-    text: 'Material Design'
-  }
+  isFrontend = true;
+
+  firstRowFrontend = [
+    { img: 'javascript.svg', text: 'JavaScript' },
+    { img: 'git.svg', text: 'GIT' },
+    { img: 'scrum.svg', text: 'Scrum' },
+    { img: 'material_design.svg', text: 'Material Design' }
   ];
 
-  secondRow = [{
-    img: 'angular.svg',
-    text: 'Angular'
-  },
-  {
-    img: 'firebase.svg',
-    text: 'Firebase'
-  },
-  {
-    img: 'api.svg',
-    text: 'Rest-API'
-  }
+  secondRowFrontend = [
+    { img: 'angular.svg', text: 'Angular' },
+    { img: 'firebase.svg', text: 'Firebase' },
+    { img: 'api.svg', text: 'Rest-API' }
   ];
 
-  thirdRow = [{
-    img: 'typescript.svg',
-    text: 'Typescript'
-  },
-  {
-    img: 'css.svg',
-    text: 'CSS'
-  }
+  thirdRowFrontend = [
+    { img: 'typescript.svg', text: 'Typescript' },
+    { img: 'css.svg', text: 'CSS' }
   ];
 
-  fourthRow = [{
-    img: 'html.svg',
-    text: 'HTML'
-  }
+  fourthRowFrontend = [
+    { img: 'html.svg', text: 'HTML' }
+  ];
+
+  firstRowBackend = [
+    { img: 'Python.svg', text: 'Python' },
+    { img: 'Django.svg', text: 'Django' },
+    { img: 'PostgresSQL.svg', text: 'PostgresSQL' },
+    { img: 'SQL.svg', text: 'SQL' },
+  ];
+
+  secondRowBackend = [
+    { img: 'Redis.svg', text: 'Redis' },
+    { img: 'Linux.svg', text: 'Linux' },
+    { img: 'Docker.svg', text: 'Docker' }
+  ];
+
+  thirdRowBackend = [
+    { img: 'Terminal.svg', text: 'Terminal' },
+    { img: 'Cloud.svg', text: 'Cloud' }
+  ];
+
+  fourthRowBackend = [
+    { img: 'Heroku.svg', text: 'Heroku' },
   ];
 
   constructor(private header: HeaderComponent) { }
 
   goToAnchor(id) {
     this.header.goDown(id);
+  }
+
+  toggleIcons() {
+    this.isFrontend = !this.isFrontend;
   }
 }

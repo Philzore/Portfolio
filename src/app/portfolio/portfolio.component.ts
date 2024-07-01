@@ -25,11 +25,11 @@ export class PortfolioComponent {
     liveLink: 'https://elpollolocco.philippmoessl.de/index.html'
   },
   {
-    name : 'Portfolio',
+    name : 'DaBubble',
     img : '/assets/projects/Simple_CRM_default.png',
-    description: 'My Portfolio build with Angular',
-    languages:'HTML | SCSS | TypeScript | Angular' ,
-    githubLink: 'https://github.com/Philzore/philippmoessl.de',
+    description: 'Chat App build with Angular',
+    languages:'HTML | SCSS | TypeScript | Angular | Firebase' ,
+    githubLink: 'https://github.com/Philzore/DABubble',
     liveLink: 'https://philippmoessl.de/'
   },
   {
@@ -39,18 +39,27 @@ export class PortfolioComponent {
     languages: 'HTML | CSS | JavaScript | API' ,
     githubLink: 'https://github.com/Philzore/Pokedex',
     liveLink: 'https://pokedex.philippmoessl.de/index.html'
+  },
+  {
+    name : 'Kanban',
+    img : '/assets/projects/Pokedex_default.png',
+    description: 'Simple Kanban System build with Django',
+    languages: 'HTML | CSS | TypeScript | Angular | Python | Django' ,
+    githubLink: 'https://github.com/Philzore/Pokedex',
+    liveLink: 'https://pokedex.philippmoessl.de/index.html'
+  },
+  {
+    name : 'Funflix',
+    img : '/assets/projects/Pokedex_default.png',
+    description: 'Video platform with Django ',
+    languages: 'HTML | CSS | TypeScript | Angular | Python | Django' ,
+    githubLink: 'https://github.com/Philzore/Pokedex',
+    liveLink: 'https://pokedex.philippmoessl.de/index.html'
   }
 ];
 
 openLink (link:string) {
-  window.open(link) ;
-
-  if (this.projects[0].languages.includes('API')) {
-    console.log('yes') ;
-  } else {
-    console.log('no') ;
-  }
- 
+  window.open(link) ; 
 }
 
 filterProject(language:string) {
