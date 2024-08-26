@@ -5,25 +5,25 @@
     <div class="icons-wrapper">
 
         <div data-aos="fade-right" class="icon-container" [class.hidden]="!isFrontend">
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showFrontendRow1">
                 <div *ngFor="let currentRow of firstRowFrontend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showFrontendRow2">
                 <div *ngFor="let currentRow of secondRowFrontend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showFrontendRow3">
                 <div *ngFor="let currentRow of thirdRowFrontend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showFrontendRow4">
                 <div *ngFor="let currentRow of fourthRowFrontend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
@@ -31,25 +31,25 @@
             </div>
         </div>
         <div data-aos="fade-right" class="icon-container" [class.hidden]="isFrontend">
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showBacktendRow1">
                 <div *ngFor="let currentRow of firstRowBackend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showBacktendRow2">
                 <div *ngFor="let currentRow of secondRowBackend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showBacktendRow3">
                 <div *ngFor="let currentRow of thirdRowBackend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>
                 </div>
             </div>
-            <div class="icon-row">
+            <div class="icon-row" *ngIf="showBacktendRow4">
                 <div *ngFor="let currentRow of fourthRowBackend" class="single-icon">
                     <img src="assets/icons/{{ currentRow.img }}">
                     <span>{{ currentRow.text }}</span>

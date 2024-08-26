@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatDialogModule} from '@angular/material/dialog'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,11 +11,11 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { SingleProjectComponent } from './single-project/single-project.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainComponent } from './main/main.component';
+
 
 @NgModule({
   declarations: [
@@ -26,15 +27,16 @@ import { MainComponent } from './main/main.component';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
-    SingleProjectComponent,
     ImprintComponent,
-    MainComponent
+    MainComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
   ],
   providers: [HeaderComponent],
   bootstrap: [AppComponent]

@@ -19,7 +19,11 @@
                 <img src="{{  currentProject['img'] }}">
                 <div class="mouse-over-dialog">
                     <div class="project-btns">
-                        <button (click)="openLink(currentProject['githubLink'])" class="btn-github">Github</button>
+                        <div *ngIf="currentProject['githubLink'].length == 2" class="project-btns-two-links">
+                            <button *ngIf="currentProject['githubLink'].length == 2" (click)="openLink(currentProject['githubLink'][0])" class="btn-github">Backend</button>
+                            <button *ngIf="currentProject['githubLink'].length == 2" (click)="openLink(currentProject['githubLink'][1])" class="btn-github">Frontend</button>
+                        </div>
+                        <button *ngIf="currentProject['githubLink'].length == 1" (click)="openLink(currentProject.githubLink[0])" class="btn-github">Github</button>
                         <button (click)="openLink(currentProject['liveLink'])" class="btn-live-test">Live Test</button>
                     </div>
                     <div class="project-info">
