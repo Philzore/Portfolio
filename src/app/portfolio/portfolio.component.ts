@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+
 
 
 @Component({
@@ -60,7 +60,7 @@ export class PortfolioComponent {
   }
   ];
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   openLink(link) {
 

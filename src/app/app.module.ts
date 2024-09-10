@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatDialogModule} from '@angular/material/dialog'; 
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +36,6 @@ import { MainComponent } from './main/main.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule,
   ],
   providers: [HeaderComponent],
   bootstrap: [AppComponent]
