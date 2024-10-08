@@ -32,7 +32,7 @@ export class PortfolioComponent {
     description: 'Chat App build with Angular',
     languages: 'HTML | SCSS | TypeScript | Angular | Firebase',
     githubLink: ['https://github.com/Philzore/DABubble'],
-    liveLink: ['https://philippmoessl.de/']
+    liveLink: ['https://dabubble.philippmoessl.de/']
   },
   {
     name: 'Pokedex',
