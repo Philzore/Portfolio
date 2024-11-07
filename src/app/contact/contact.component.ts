@@ -54,7 +54,7 @@ export class ContactComponent {
       fd.append('message', messageField.value);
       fd.append('mail', mailField.value);
       //send
-      await fetch('https://philipp-moessl.developerakademie.net/send_mail/send_mail.php',
+      await fetch('https://philippmoessl.de/send_mail/send_mail.php', //philippmoessl.de/send_mail.php
         {
           method: 'POST',
           body: fd,
@@ -108,7 +108,7 @@ export class ContactComponent {
   nameErrors(nameField) {
     if (nameField.value == '') {
       this.nameErrorMsg = this.nameErrorMsgs[0];
-    } else if (nameField.value.length <= 3) {
+    } else if (nameField.value.length <= 2) {
       this.nameErrorMsg = this.nameErrorMsgs[1];
     }
 
